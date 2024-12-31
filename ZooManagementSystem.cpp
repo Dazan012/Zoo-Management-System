@@ -14,3 +14,23 @@ private:
     std::string name;
     std::string species;
 };
+
+class Zoo
+{
+public:
+    void addAnimal(const Animal &animal)
+    {
+        animals.push_back(animal);
+    }
+
+    void displayAnimals()
+    {
+        for (const auto &animal : animals)
+        {
+            animal.displayInfo();
+        }
+    }
+
+private:
+    std::vector<Animal> animals;
+};
